@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="styles.css">
+    <title>ALTARES</title>
+    <style>
+       :root {
+            --primary: #8b4513;
+            --primary-dark: #6b3410;
+            --dark: #3b2a1a;
+            --light: #fdf6ec;
+            --bg: rgb(192, 163, 124);
+            --shadow: 0 8px 24px rgba(59, 42, 26, 0.25);
+        }
+ 
+        * {
+            box-sizing: border-box;
+        }
+ 
+        body {
+            margin: 0;
+            padding: 20px 0 60px;
+            background-color: var(--bg);
+            /* Capa semitransparente + imagen de fondo */
+            background-image:
+                linear-gradient(rgba(192, 163, 124, 0.55), rgba(192, 163, 124, 0.55)),
+                url('coo1.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--dark);
+            min-height: 100vh;
+        }
+ 
+        /* Botón de inicio */
+        .btn-inicio {
+            display: inline-block;
+            margin: 10px 0 10px 5%;
+            padding: 0;
+            border: none;
+            border-radius: 30px;
+            background: var(--primary);
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+ 
+        .btn-inicio a {
+            display: block;
+            padding: 10px 26px;
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+ 
+        .btn-inicio:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+ 
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+ 
+        .section-title {
+            text-align: center;
+            font-size: 2.6rem;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            color: var(--dark);
+            margin: 30px 0 45px;
+            position: relative;
+            text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+ 
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+ 
+        /* Galería */
+        .grid-categorias {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 28px;
+        }
+ 
+        .categoria {
+            position: relative;
+            overflow: hidden;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            background: url(bu1.jpeg);
+            aspect-ratio: 4 / 5;
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+        }
+ 
+        .categoria img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.6s ease;
+        }
+ 
+        .categoria-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(59, 42, 26, 0.65), transparent 55%);
+            opacity: 0;
+            transition: opacity 0.35s ease;
+        }
+ 
+        .categoria:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 14px 34px rgba(59, 42, 26, 0.4);
+        }
+ 
+        .categoria:hover img {
+            transform: scale(1.08);
+        }
+ 
+        .categoria:hover .categoria-overlay {
+            opacity: 1;
+        }
+ 
+        /* Responsive */
+        @media (max-width: 600px) {
+            .section-title {
+                font-size: 1.8rem;
+                letter-spacing: 3px;
+            }
+ 
+            .grid-categorias {
+                gap: 20px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <button>
+        <a href="index.html">inicio</a>
+    </button>
+    <section >
+          
+        <div class="container">
+            <h2 class="section-title">ALTARES</h2>
+            <div class="grid-categorias">
+                <div class="categoria">
+                    <img src="na1.jpeg" alt="Decoraciones parta eventos">
+                    <div class="categoria-overlay">
+
+                    </div>
+
+                </div> <div class="categoria">
+                    <img src="ne1.jpeg" alt="Regalos y sorpresas">
+                    <div class="categoria-overlay">
+                    </div>
+                </div>
+                 <div class="categoria">
+                    <img src="ni1.jpeg" alt="Regalos y sorpresas">
+                    <div class="categoria-overlay">
+                    </div>
+                </div>
+
+    <div class="categoria">
+        <img src="no1.jpeg" alt="Regalos y sorpresas">
+        <div class="categoria-overlay">
+        
+        </div>
+    </div>
+
+    
+</body>
+</html>
